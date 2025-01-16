@@ -48,8 +48,8 @@ def run(playwright: Playwright) -> None:
 
         area = page.get_by_text("Skip to results. Back to")
 
-        applications = extract_planning_applications(area.inner_html())
-        applications.extend(applications)
+        parish_applications = extract_planning_applications(area.inner_html())
+        applications.extend(parish_applications)
 
     # ---------------------
     context.close()
